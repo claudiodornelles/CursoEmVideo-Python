@@ -1,5 +1,7 @@
 # CursoEmVideo-Python
 
+Olá, mundo!
+
 Este repositório contém os exercícios realizados por mim durante a realização do curso de linguagem Python do canal CursoEmVideo no YouTube.
 
 Link do canal no YouTube:

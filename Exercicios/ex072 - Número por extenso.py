@@ -7,8 +7,22 @@ numeros = ("zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oi
 
 numero = 21
 
-while numero > 20 or 0 > numero:
-    print(f'Não entendi. Por favor, digite um número entre 0 e 20.')
-    numero = int(input("Digite um número entre 0 e 20: "))
+while True:
 
-print(f'Você digitou o número {numeros[numero]}.')
+    while True:
+        numero = str(input("Digite um número entre 0 e 20: "))
+        if numero in '01234567891011121314151617181920':
+            break
+        print(f'Não entendi. ', end='')
+
+    print(f'Você digitou o número {numeros[int(numero)]}.')
+
+    while True:
+        resposta = str(input('Deseja continuar [S/N]? '))
+        if resposta in 'SsNn':
+            break
+        print('Não entendi. ', end='')
+
+    if resposta in 'Nn':
+        break
+print('\nPrograma encerrado.\n')

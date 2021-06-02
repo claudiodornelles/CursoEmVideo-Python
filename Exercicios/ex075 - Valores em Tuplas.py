@@ -7,8 +7,10 @@ Desenvolva um programa que leia quatro valores pelo teclado e guarde-os em uma t
 
 """
 
-pares = []
-tupla = (int(input("Informe o primeiro valor: ")),int(input("Informe o segundo valor: ")),int(input("Informe o terceiro valor: ")), int(input("Informe o quarto valor: ")))
+tupla = (int(input("Informe o primeiro valor: ")),
+         int(input("Informe o segundo valor: ")),
+         int(input("Informe o terceiro valor: ")),
+         int(input("Informe o quarto valor: ")))
 
 print(f'Você digitou os valores {tupla}')
 if tupla.count(9) != 1:
@@ -28,5 +30,3 @@ for elemento in tupla:
         print(f'{elemento}, ', end = '')
 
 print('\b\b.')
-
-

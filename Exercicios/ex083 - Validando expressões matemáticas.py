@@ -7,7 +7,7 @@ teste = []
 
 for letra in expressao:
     if letra == '(':
-        teste.append(letra)
+        teste.append('(')
     elif letra == ')':
         if '(' in teste:
             teste.remove('(')

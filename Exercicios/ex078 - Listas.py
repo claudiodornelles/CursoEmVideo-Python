@@ -11,8 +11,7 @@ i = j = maior = menor = 0
 for i in range(0,5):
     n.append(int(input(f"Digite um valor para a posição {i}: ")))
     if i == 0:
-        maior = n[i]
-        menor = n[i]
+        maior = menor = n[i]
     else:
         if n[i] > maior:
             maior = n[i]

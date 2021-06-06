@@ -12,6 +12,7 @@ while True:
     try:
         numero = int(input('Digite um número: '))
     except:
+        print('Não entendi... ', end='')
         continue
 
     numeros.append(numero)

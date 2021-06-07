@@ -10,10 +10,8 @@ lista_aux = []
 rep = 0
 
 while True:
-    nome = str(input('Nome: '))
-    lista_aux.append(nome)
-    peso = float(input('Peso: '))
-    lista_aux.append(peso)
+    lista_aux.append(str(input('Nome: ')))
+    lista_aux.append(float(input('Peso: ')))
 
     pessoas.append(lista_aux[:])
     lista_aux.clear()

@@ -15,7 +15,7 @@ print('-='*30)
 for i in range(0, 3):
     for j in range(0,3):
         if j != 2:
-            print(f'[ {matriz[i][j]} ]', end='')
+            print(f'[{matriz[i][j]:^6}]', end='')
         else:
-            print(f'[ {matriz[i][j]} ]')
+            print(f'[{matriz[i][j]:^6}]')
 print()

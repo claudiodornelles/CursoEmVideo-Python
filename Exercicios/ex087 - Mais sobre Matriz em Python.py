@@ -27,13 +27,12 @@ print('-='*30)
 for i in range(0,3):
     for j in range(0,3):
         if j != 2:
-            print(f'[ {matriz[i][j]} ]', end='')
+            print(f'[ {matriz[i][j]:^6} ]', end='')
         else:
-            print(f'[ {matriz[i][j]} ]')
+            print(f'[ {matriz[i][j]:^6} ]')
+
 print('-='*30)
 print(f'A soma de todos os valores pares digitados é {soma_pares}.')
-
-
 
 print(f'A soma dos valores da terceira coluna é ', end='')
 

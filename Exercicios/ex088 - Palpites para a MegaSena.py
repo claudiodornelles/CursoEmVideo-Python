@@ -6,6 +6,7 @@ from random import randint
 from time import sleep
 
 numeros = []
+jogos = []
 
 print('-'*35)
 print(f'{"JOGO DA MEGA SENA":^35}')
@@ -21,11 +22,12 @@ else:
 for i in range(0,n_jogos):
     for j in range(0,6):
         while True:
-            numero = randint(1,61)
+            numero = randint(1,60)
             if numero not in numeros:
                 numeros.append(numero)
                 break
+    jogos.append(numeros[:])
     sleep(0.5)
-    print(f'Jogo {i + 1}: {sorted(numeros)}')
+    print(f'Jogo {i + 1}: {sorted(jogos[i])}')
     numeros.clear()
 print(f'-=-=-=-=-=-=< BOA SORTE! >=-=-=-=-=-=-')

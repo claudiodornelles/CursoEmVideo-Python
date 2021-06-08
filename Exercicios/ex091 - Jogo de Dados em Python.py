@@ -13,7 +13,7 @@ jogadores = {'Jogador 1':randint(1,6),
 print('== Valores sorteados ==')
 sleep(0.75)
 for chave, valor in jogadores.items():
-    print(f'  O {chave} tirou {valor}')
+    print(f'   {chave} tirou {valor}')
     sleep(0.75)
 
 print()

@@ -11,14 +11,14 @@ jogadores = {'Jogador 1':randint(1,6),
              'Jogador 4':randint(1,6)}
 
 print('== Valores sorteados ==')
-sleep(0.75)
 for chave, valor in jogadores.items():
-    print(f'   {chave} tirou {valor}')
     sleep(0.75)
+    print(f'   {chave} tirou {valor}')
 
 print()
 print(' == Ranking dos jogadores == ')
 
+""" ------------ Minha solução ----------- """
 jogadores_cp = jogadores.copy()
 ranking = []
 temp = []
@@ -41,6 +41,13 @@ for i in jogadores:
     ranking.append(temp[:])
     temp.clear()
     del jogadores_cp[maior_jogador]
+""" --------------------------------------- """
+""" ---------- Solução Guanabara ---------- """
+
+#  from operator import itemgetter
+#  ranking = sorted(jogadores.items(), key=itemgetter(1), reverse=True)
+
+""" --------------------------------------- """
 
 for pos, jogador in enumerate(ranking):
     sleep(0.75)

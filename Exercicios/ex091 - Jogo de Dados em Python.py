@@ -5,24 +5,27 @@ Crie um programa onde 4 jogadores joguem um dado e tenham resultados aleatórios
 from random import randint
 from time import sleep
 
-dicionario = {'Jogador 1':randint(1,6), 'Jogador 2':randint(1,6), 'Jogador 3':randint(1,6), 'Jogador 4':randint(1,6)}
+jogadores = {'Jogador 1':randint(1,6),
+             'Jogador 2':randint(1,6),
+             'Jogador 3':randint(1,6),
+             'Jogador 4':randint(1,6)}
 
 print('== Valores sorteados ==')
 sleep(0.75)
-for chave, valor in dicionario.items():
+for chave, valor in jogadores.items():
     print(f'  O {chave} tirou {valor}')
     sleep(0.75)
-    
+
 print()
 print(' == Ranking dos jogadores == ')
 
-dicionario_cp = dicionario.copy()
+jogadores_cp = jogadores.copy()
 ranking = []
 temp = []
 rep = 0
 
-for i in dicionario:
-    for chave, valor in dicionario_cp.items():
+for i in jogadores:
+    for chave, valor in jogadores_cp.items():
 
         if rep == 0:
             maior_valor = valor
@@ -37,7 +40,7 @@ for i in dicionario:
     temp.append(maior_valor)
     ranking.append(temp[:])
     temp.clear()
-    del dicionario_cp[maior_jogador]
+    del jogadores_cp[maior_jogador]
 
 for pos, jogador in enumerate(ranking):
     sleep(0.75)

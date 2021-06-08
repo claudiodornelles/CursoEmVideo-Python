@@ -7,13 +7,15 @@ aluno = {}
 aluno['nome'] = str(input('Nome: ')).title().strip()
 aluno['media'] = float(input(f'Média de {aluno["nome"]}: '))
 
-print(f'Nome é igual a {aluno["nome"]}.')
-print(f'Média é igual a {aluno["media"]:.1f}.')
-print('Situação é igual a ', end='')
+print(f'   - Nome é igual a {aluno["nome"]}.')
+print(f'   - Média é igual a {aluno["media"]:.1f}.')
+print('   - Situação é igual a ', end='')
 
-if aluno['media'] >= 7:
-    print('Aprovado.')
+if aluno['media'] < 5:
+    print('REPROVADO.')
+elif aluno['media'] < 7:
+    print('EM RECUPERAÇÃO.')
 else:
-    print('Reprovado.')
+    print('APROVADO.')
 
 print()

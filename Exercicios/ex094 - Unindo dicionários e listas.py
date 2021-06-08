@@ -13,11 +13,19 @@ soma_idades = media = 0
 
 while True:
     temp['nome'] = str(input('Nome: ')).strip().title()
-    temp['sexo'] = str(input('Sexo: [M/F] ')).upper().strip()
+    while True:
+        temp['sexo'] = str(input('Sexo: [M/F] ')).upper().strip()
+        if temp['sexo'] in 'MFmf':
+            break
+        print('Erro! Por favor, digite apenas M ou F.')
     temp['idade'] = int(input('Idade: '))
     pessoas.append(temp.copy())
     temp.clear()
-    resp = str(input('Quer continuar? [S/N] '))
+    while True:
+        resp = str(input('Quer continuar? [S/N] '))
+        if resp in 'SsNn':
+            break
+        print('Erro! Por favor, digite apenas S ou N.')
     if resp in 'Nn':
         break
 
@@ -43,8 +51,7 @@ for m in range(0, len(mulheres)):
         print(f'\b\b e {mulheres[m]}.')
 
 print('- Lista das pessoas com idade acima da média:')
-print()
 for pessoa in pessoas:
     if pessoa['idade'] > media:
-        print(f'--> Nome = {pessoa["nome"]}; Sexo = {pessoa["sexo"]}; Idade = {pessoa["idade"]}.')
+        print(f'  --> Nome = {pessoa["nome"]}; Sexo = {pessoa["sexo"]}; Idade = {pessoa["idade"]}.')
 print('\n<< ENCERRADO >>\n')

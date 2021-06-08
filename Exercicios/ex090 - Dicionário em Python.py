@@ -4,18 +4,16 @@ Faça um programa que leia nome e média de um aluno, guardando também a situa�
 
 aluno = {}
 
-aluno['nome'] = str(input('Nome: ')).title().strip()
-aluno['media'] = float(input(f'Média de {aluno["nome"]}: '))
+aluno['Nome'] = str(input('Nome: ')).title().strip()
+aluno['Média'] = float(input(f'Média de {aluno["Nome"]}: '))
 
-print(f'   - Nome é igual a {aluno["nome"]}.')
-print(f'   - Média é igual a {aluno["media"]:.1f}.')
-print('   - Situação é igual a ', end='')
-
-if aluno['media'] < 5:
-    print('REPROVADO.')
-elif aluno['media'] < 7:
-    print('EM RECUPERAÇÃO.')
+if aluno['Média'] < 5:
+    aluno['Situação'] = 'REPROVADO'
+elif aluno['Média'] < 7:
+    aluno['Situação'] = 'EM RECUPERAÇÃO'
 else:
-    print('APROVADO.')
-
+    aluno['Situação'] = 'APROVADO'
+print('-='*30)
+for k, v in aluno.items():
+    print(f'   - {k} é igual a {v}.')
 print()

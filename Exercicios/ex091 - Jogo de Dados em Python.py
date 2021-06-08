@@ -7,13 +7,14 @@ from time import sleep
 
 dicionario = {'Jogador 1':randint(1,6), 'Jogador 2':randint(1,6), 'Jogador 3':randint(1,6), 'Jogador 4':randint(1,6)}
 
-print('Valores sorteados:')
+print('== Valores sorteados ==')
 sleep(0.75)
 for chave, valor in dicionario.items():
     print(f'  O {chave} tirou {valor}')
     sleep(0.75)
-
-print('Ranking dos jogadores:')
+    
+print()
+print(' == Ranking dos jogadores == ')
 
 dicionario_cp = dicionario.copy()
 ranking = []

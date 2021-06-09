@@ -10,7 +10,17 @@ c) Uma contagem personalizada.
 
 from time import sleep
 
-def contador(init, end, step):
+def contador(init: int, end: int, step: int):
+    
+    """
+    -> Realiza uma contagem do inicio ao fim, pulando de tantos em tantos numeros e mostra na tela.
+
+    :param init: Inicio
+    :param end: Fim
+    :param step: Passo
+    """
+
+
     if step < 0:
             step = - step
     if step == 0:

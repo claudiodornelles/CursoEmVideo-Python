@@ -6,7 +6,14 @@ from random import randint
 from time import sleep
 
 
-def sorteia(lista):
+def sorteia(lista: list):
+    """
+    -> Sorteia 5 valores, guarda em uma lista e mostra os valores na tela.
+    
+    :param lista: Variável que irá estocar os valores sorteados.
+    """
+
+
     print(f'Sorteando 5 valores: ', end='')
     for i in range(0, 5):
         lista.append(randint(1, 10))

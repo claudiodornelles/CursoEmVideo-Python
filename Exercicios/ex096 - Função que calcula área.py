@@ -2,7 +2,14 @@
 Faça um programa que tenha uma função chamada área() que receba as dimensões de um terreno retangular (largura e comprimento) e mostre a área do terreno.
 """
 
-def área(x, y):
+def área(x: float, y: float):
+    """
+    -> Calcula a área de um retângulo e mostra o resultado na tela.
+    :param x: Lado 1
+    :param y: Lado 2
+    :return: Sem retorno.
+    """
+
     a = x * y
     print(f'A área de um terreno {x:.2f}m x {y:.2f}m é igual a {a:.2f}m².')
 

@@ -4,7 +4,14 @@ Seu programa tem que analisar todos os valores e dizer qual deles é o maior.
 """
 from time import sleep
 
-def maior(* numeros):
+def maior(* numeros: float):
+    """
+    -> Cálcula o maior número informado em uma sequência de números digitados.
+
+    :param numeros: Não aceita listas
+    """
+
+
     print('-='*30)
     print('Analisando os valores passados...')
     if len(numeros) != 0:

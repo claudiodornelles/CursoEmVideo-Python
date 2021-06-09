@@ -8,7 +8,18 @@ Saída:
 ~~~~~~~~~~~~~
 """
 
-def escreva(txt):
+def escreva(txt: str):
+    """
+    -> Mostra na tela uma mensagem formatada como abaixo:
+    \~~~~~~~~~~~~~
+      Olá, Mundo! 
+    \~~~~~~~~~~~~~
+    
+    :param txt: Mensagem
+    :return: Sem retorno.
+    """
+
+
     tam = len(txt) + 4
     print('~'*tam)
     print(f'  {txt}  ')

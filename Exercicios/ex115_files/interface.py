@@ -38,18 +38,17 @@ def escolha(options: list() = 'None'):
 
 def exibirDados(file_name):
     try:
-        open(file_name, 'r')
+        open(file_name, 'rt')
     except:
         open(file_name, 'w+')
     else:
         titulo('PESSOAS CADASTRADAS', color='amarelo')
         sleep(1)
-        i = 1
-        with open(file_name, 'r') as file:
-            for line in file:
-                print(f'{line}', end='')
-                i += 1
-            print()
+        file = open(file_name, 'rt')
+        for line in file:
+            dado = line.split(';')
+            dado[1] = dado[1].replace('\n', '')
+            print(f'{dado[0]:<30}{dado[1]:>10}')
         sleep(2)
 
 
@@ -65,6 +64,6 @@ def novoCadastro(file_name):
         sleep(0.5)
         idade = leia.idade()
         with open(file_name, 'a') as file:
-            file.write(f'\n{nome.ljust(30)}{idade} anos')
+            file.write(f'{nome};{idade} anos\n')
         print(f'Novo registro de {cores.texto["amarelo"]}{nome}{cores.texto["null"]} adicionado.')
         sleep(1)

@@ -38,7 +38,7 @@ def escolha(options: list() = 'None'):
 
 def exibirDados(file_name):
     try:
-        open(file_name, 'r+')
+        open(file_name, 'r')
     except:
         open(file_name, 'w+')
     else:
@@ -55,7 +55,7 @@ def exibirDados(file_name):
 
 def novoCadastro(file_name):
     try:
-        open(file_name, 'r+')
+        open(file_name, 'r')
     except:
         open(file_name, 'w+')
     else:

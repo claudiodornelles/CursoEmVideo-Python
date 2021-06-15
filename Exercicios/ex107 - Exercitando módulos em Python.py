@@ -3,7 +3,7 @@ Crie um módulo chamado moeda.py que tenha funções incorporadas aumentar(), di
 
 Faça também um programa que importe esse módulo e use algumas dessas funções.
 """
-from ex107 import moeda
+from ex107_files import moeda
 
 p = float(input('Digite o preço: R$'))
 print(f'A metade de {p} é {moeda.metade(p)}')
